@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (cartBtn) {
     cartBtn.addEventListener("click", () => {
-      // 👉 Add your cart logic here
       alert("Cart button clicked!");
     });
   }
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
       message: { el: document.getElementById("message"), regex: /^.{5,}$/ }
     };
 
-    // Hide error messages initially & attach input listeners
     Object.values(fields).forEach(({ el }) => {
       const errorDiv = el.nextElementSibling;
       if (errorDiv) errorDiv.style.display = "none";
@@ -168,18 +166,28 @@ Priority: ${document.getElementById("priority").value}`
       });
     });
 
-    if (toggleButton && navbarCollapse) {
-      toggleButton.addEventListener("click", () => {
-        if (!navbarCollapse.classList.contains("show")) {
-          navbarCollapse.style.backgroundColor = "#121E47";
-        } else {
-          navbarCollapse.style.backgroundColor = "";
-          if (isLargeScreen() && window.scrollY < 50) {
-            nav.classList.remove("scrolled");
-          }
-        }
-      });
+   function handleResize() {
+  if (isLargeScreen()) {
+    navbarCollapse.classList.remove("navbar-dark-bg");
+    nav.classList.remove("scrolled");
+  }
+}
+
+if (toggleButton && navbarCollapse) {
+  toggleButton.addEventListener("click", () => {
+    if (!navbarCollapse.classList.contains("show")) {
+      navbarCollapse.classList.add("navbar-dark-bg");
+    } else {
+      navbarCollapse.classList.remove("navbar-dark-bg");
+      if (isLargeScreen() && window.scrollY < 50) {
+        nav.classList.remove("scrolled");
+      }
     }
+  });
+
+  window.addEventListener("resize", handleResize);
+}
+
 
     updateNavbar();
   }

@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body>
-    <header class="header" id="home">
+<body class="nile">
+    <header class="header nile-header" id="home">
         <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
             <div class="container">
                 <a class="navbar-brand fw-bold fs-3" href="index.html"><i class="fas fa-building me-2"></i>Mithaqq</a>
@@ -45,13 +45,15 @@
                     </ul>
                     <ul class="list-unstyled d-flex gap-3 justify-content-center align-items-center ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link px-2" href="#facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="nav-link px-2" href="#facebook"><i class="fa-solid fa-user"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-2" href="#instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="nav-link px-2" href="login.html"><i class="fa-solid fa-right-to-bracket"></i>
+                                Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-2" href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="nav-link px-2" href="#linkedin"><i class="fa-solid fa-right-from-bracket"></i>
+                                Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +63,8 @@
 
         <div class="hero d-flex align-items-center text-white">
             <div class="container">
-                <div class="row g-4 align-items-center justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="200">
+                <div class="row g-4 align-items-center justify-content-center justify-content-lg-start"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="col-lg-10">
                         <div class="content">
                             <span class="badge header-badge rounded-pill px-3 py-2 mb-3">Permenant Trust</span>
@@ -77,15 +80,18 @@
                             <a href="index.html#companies" class="btn btn-lg btn-primary px-4"><i
                                     class="fas fa-rocket me-2"></i>Explore Companies</a>
 
-                            <div class="partner-logos mt-5 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                                <div class="logo-img"><img src="images/logo-1.jpg" class="me-4 rounded-2 mb-3"
-                                        alt="LA Coach Base" height="100"></div>
-                                <div class="logo-img"><img src="images/logo-2.jpg" class="me-4 rounded-2 mb-3"
-                                        alt="LA Coach Base" height="100"></div>
-                                <div class="logo-img"><img src="images/logo-3.jpg" class="me-4 rounded-2 mb-3"
-                                        alt="LA Coach Base" height="100"></div>
-                                <div class="logo-img"><img src="images/logo-4.jpg" class="me-4 rounded-2 mb-3"
-                                        alt="LA Coach Base" height="100"></div>
+                            <div
+                                class="partner-logos mt-5 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                <a href="Easy-way.html" class="logo-img"><img src="images/logo-1.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
+                                <a href="global.html" class="logo-img"><img src="images/logo-2.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
+                                <a href="nile.html" class="logo-img"><img src="images/logo-3.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
+                                <a href="nile-store.html" class="logo-img"><img src="images/logo-4.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
+                                <a href="innovation.html" class="logo-img"><img src="images/logo-5.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
                             </div>
                         </div>
                     </div>
@@ -105,7 +111,7 @@
             </svg>
         </div>
     </header>
-    <section class="py-5">
+    <section class="py-5 about">
         <div class="container">
             <div class="text-center" data-aos="fade-up" data-aos-delay="200">
                 <h2 class="mb-4 text-center">About Mithaqq Nile</h2>
@@ -119,6 +125,13 @@
                         </video>
                     </div>
                 </div>
+            </div>
+            <div class="floating-icons">
+                <i class="fas fa-chart-line"></i>
+                <i class="fas fa-bullhorn"></i>
+                <i class="fas fa-users"></i>
+                <i class="fas fa-lightbulb"></i>
+                <i class="fas fa-chart-pie"></i>
             </div>
         </div>
     </section>
@@ -198,7 +211,7 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card text-center p-4">
+                    <div class="service-card text-center p-3">
                         <div class="icon mb-3">
                             <i class="fas fa-bullhorn"></i>
                         </div>
@@ -213,9 +226,8 @@
                     </div>
                 </div>
 
-                <!-- Marketing ads -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card text-center p-4">
+                    <div class="service-card text-center  p-3">
                         <div class="icon mb-3">
                             <i class="fas fa-ad"></i>
                         </div>
@@ -230,9 +242,8 @@
                     </div>
                 </div>
 
-                <!-- Building brand identities -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card text-center p-2">
+                    <div class="service-card text-center p-3">
                         <div class="icon mb-3">
                             <i class="fas fa-building"></i>
                         </div>
@@ -247,9 +258,8 @@
                     </div>
                 </div>
 
-                <!-- Graphic video design -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card text-center p-4">
+                    <div class="service-card text-center p-3">
                         <div class="icon mb-3">
                             <i class="fas fa-video"></i>
                         </div>
@@ -264,9 +274,8 @@
                     </div>
                 </div>
 
-                <!-- Motion graphic design -->
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card text-center p-4">
+                    <div class="service-card text-center p-3">
                         <div class="icon mb-3">
                             <i class="fas fa-play-circle"></i>
                         </div>
@@ -282,6 +291,107 @@
                 </div>
 
             </div>
+
+        </div>
+    </section>
+    <section class="py-5 products">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>Our Products</h2>
+            </div>
+            <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="images/company2.jpg" class="card-img-top" alt="">
+                            <span
+                                class="badge text-white bg-danger badge-custom position-absolute top-0 end-0 m-2">SALE</span>
+                            <span class="badge  badge-custom-1 position-absolute top-0 start-0 m-2">Mithaqq
+                                Nile</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Marketing Starter Package</h5>
+                            <p class="small text-secondary">Complete digital marketing package including social
+                                media management, basic SEO, and monthly reporting.</p>
+                            <div class="mb-2 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted small">(156)</span>
+                            </div>
+                            <h5 class="text-success d-inline">$299</h5>
+                            <span class="text-muted text-decoration-line-through">$399</span>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-success w-100"> <i class="fas fa-cart-plus me-2"></i>Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="images/company2.jpg" class="card-img-top" alt="">
+                            <span class="badge  badge-custom-1 position-absolute top-0 start-0 m-2">Mithaqq
+                                Nile</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Professional Marketing Suite</h5>
+                            <p class="small text-secondary">Advanced digital marketing services with content
+                                creation, PPC management, and dedicated support.</p>
+                            <div class="mb-2 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted small">(89)</span>
+                            </div>
+                            <h5 class="text-success d-inline">$599</h5>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-success w-100"> <i class="fas fa-cart-plus me-2"></i>Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="images/company2.jpg" class="card-img-top" alt="">
+                            <span
+                                class="badge text-white bg-danger badge-custom position-absolute top-0 end-0 m-2">SALE</span>
+                            <span class="badge  badge-custom-1 position-absolute top-0 start-0 m-2">Mithaqq
+                                Global</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Marketing Mastery Course</h5>
+                            <p class="small text-secondary">Comprehensive 8-week course covering SEO, social
+                                media, content marketing, and analytics.</p>
+                            <div class="mb-2 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-muted small">(1250)</span>
+                            </div>
+                            <h5 class="text-success d-inline">$299</h5>
+                            <span class="text-muted text-decoration-line-through">$399</span>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button class="btn btn-success w-100"> <i class="fas fa-cart-plus me-2"></i>Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
                 <a href="nile-store.html" class="btn btn-accent btn-lg">
                     <i class="fas fa-store me-2"></i>Visit Mithaqq Store
@@ -290,12 +400,10 @@
         </div>
     </section>
 
-    <!-- Floating Cart Button -->
-    <a href="cart.html" class="floating-btn cart-btn" title="View Cart">
+   <a href="nile-store.html" class="floating-btn cart-btn" title="View Cart">
         <i class="fas fa-shopping-cart"></i>
     </a>
 
-    <!-- Back to Top Button -->
     <button id="backToTop" class="floating-btn top-btn" title="Back to Top">
         <i class="fas fa-arrow-up"></i>
     </button>

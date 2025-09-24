@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body>
-    <header class="header" id="home">
+<body class="global">
+    <header class="header global-header" id="home">
         <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
             <div class="container">
                 <a class="navbar-brand fw-bold fs-3" href="index.html"><i class="fas fa-building me-2"></i>Mithaqq</a>
@@ -43,15 +43,17 @@
 
 
                     </ul>
-                    <ul class="list-unstyled d-flex gap-3 align-items-center ms-auto">
+                    <ul class="list-unstyled d-flex gap-3 justify-content-center align-items-center ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link px-2" href="#facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="nav-link px-2" href="#facebook"><i class="fa-solid fa-user"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-2" href="#instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="nav-link px-2" href="login.html"><i class="fa-solid fa-right-to-bracket"></i>
+                                Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-2" href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="nav-link px-2" href="#linkedin"><i class="fa-solid fa-right-from-bracket"></i>
+                                Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -77,15 +79,18 @@
                             <a href="index.html#companies" class="btn btn-lg btn-primary px-4"><i
                                     class="fas fa-rocket me-2"></i>Explore Companies</a>
 
-                            <div class="partner-logos mt-5 d-flex flex-wrap align-items-center">
-                                <div class="logo-img"><img src="images/logo-1.jpg" class="me-4 rounded-2 mb-3"
-                                        alt="LA Coach Base" height="100"></div>
-                                <div class="logo-img"><img src="images/logo-2.jpg" class="me-4 rounded-2 mb-3"
-                                        alt="LA Coach Base" height="100"></div>
-                                <div class="logo-img"><img src="images/logo-3.jpg" class="me-4 rounded-2 mb-3"
-                                        alt="LA Coach Base" height="100"></div>
-                                <div class="logo-img"><img src="images/logo-4.jpg" class="me-4 rounded-2 mb-3"
-                                        alt="LA Coach Base" height="100"></div>
+                            <div
+                                class="partner-logos mt-5 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                <a href="Easy-way.html" class="logo-img"><img src="images/logo-1.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
+                                <a href="global.html" class="logo-img"><img src="images/logo-2.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
+                                <a href="nile.html" class="logo-img"><img src="images/logo-3.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
+                                <a href="nile-store.html" class="logo-img"><img src="images/logo-4.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
+                                <a href="innovation.html" class="logo-img"><img src="images/logo-5.jpg"
+                                        class="me-4 rounded-2 mb-3" alt="LA Coach Base" height="100"></a>
                             </div>
                         </div>
                     </div>
@@ -137,6 +142,9 @@
                         </div>
                     </div>
                 </div>
+                <i class="fa-solid fa-chalkboard-teacher floating-icon icon-1"></i>
+                <i class="fa-solid fa-book-open floating-icon icon-2"></i>
+                <i class="fa-solid fa-laptop-code floating-icon icon-3"></i>
             </div>
         </section>
         <section class="features-section pt-5" id="values">
@@ -198,7 +206,6 @@
                 </div>
             </div>
         </section>
-        <!-- Training Fields -->
         <section class="py-5 bg-light" id="fields">
             <div class="container">
                 <div class="text-center mb-5">
@@ -270,7 +277,6 @@
                 </div>
             </div>
         </section>
-        <!-- Training Courses -->
         <section class="py-5" id="courses">
             <div class="container">
                 <div class="text-center mb-5">
@@ -278,7 +284,6 @@
                     <p class="lead text-muted">Choose from our comprehensive course catalog</p>
                 </div>
 
-                <!-- Course Filter Tabs -->
                 <ul class="nav nav-pills justify-content-center mb-5" id="courseFilter">
                     <li class="nav-item">
                         <a class="nav-link active" data-bs-toggle="pill" href="#all-courses">All Courses</a>
@@ -291,7 +296,6 @@
                     </li>
                 </ul>
 
-                <!-- Course Content -->
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="all-courses">
                         <div class="row g-4" id="courseGrid" data-aos="fade-up" data-aos-delay="200">
@@ -803,11 +807,10 @@
             </div>
         </section>
     </main>
-    <a href="cart.html" class="floating-btn cart-btn" title="View Cart">
+   <a href="nile-store.html" class="floating-btn cart-btn" title="View Cart">
         <i class="fas fa-shopping-cart"></i>
     </a>
 
-    <!-- Back to Top Button -->
     <button id="backToTop" class="floating-btn top-btn" title="Back to Top">
         <i class="fas fa-arrow-up"></i>
     </button>
