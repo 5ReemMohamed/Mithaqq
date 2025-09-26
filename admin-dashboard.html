@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mithaqq</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  
+       <section class="dashboard">
+            <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-lg-2 px-0">
+                <div class="sidebar bg-light vh-100">
+                    
+                    <div class="p-3">
+                        <div class="logo mb-5">
+                                        <a class="navbar-brand fw-bold fs-3" href="index.html"><i class="fas fa-building me-2"></i>Mithaqq</a>
+
+                    </div>
+                        <h6 class="text-muted mb-3">DASHBOARD SELECTION</h6>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary" onclick="showEcommerceDashboard()">
+                                <i class="fas fa-shopping-cart me-2"></i>E-commerce
+                            </button>
+                            <button class="btn btn-outline-success" onclick="showLMSDashboard()">
+                                <i class="fas fa-graduation-cap me-2"></i>LMS
+                            </button>
+                        </div>
+                    </div>
+                    <div class="logout p-3 d-flex justify-content-center align-items-end">
+                           <a class="nav-link px-2" href="#linkedin"><i class="fa-solid fa-right-from-bracket"></i>
+                                Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-lg-10">
+                <div class="p-4">
+                    <div id="dashboardSelection" class="text-center">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <h1 class="display-4 fw-bold mb-4">Admin Dashboard</h1>
+                                <p class="lead text-muted mb-5">Select the dashboard you want to manage</p>
+                                
+                                <div class="row g-4">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="dashboard-card" onclick="showEcommerceDashboard()">
+                                            <div class="dashboard-icon">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </div>
+                                            <h3>E-commerce Dashboard</h3>
+                                            <p>Manage products, orders, sales analytics, and marketer performance</p>
+                                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                                <li><i class="fas fa-check text-success me-2"></i>Product Management</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Sales Monitoring</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Marketer Management</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Order Processing</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="dashboard-card" onclick="showLMSDashboard()">
+                                            <div class="dashboard-icon">
+                                                <i class="fas fa-graduation-cap"></i>
+                                            </div>
+                                            <h3>LMS Dashboard</h3>
+                                            <p>Manage courses, lessons, instructors, and learning analytics</p>
+                                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                                <li><i class="fas fa-check text-success me-2"></i>Course Management</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Content Review</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Student Progress</li>
+                                                <li><i class="fas fa-check text-success me-2"></i>Revenue Reports</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ecommerceDashboard" class="d-none">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+                            <h3><i class="fas fa-shopping-cart me-2"></i>E-commerce Dashboard</h3>
+                            <button class="btn btn-outline-secondary" onclick="showDashboardSelection()">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Selection
+                            </button>
+                        </div>
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-3 mb-3">
+                                <div class="card text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="card-title">Total Products</h6>
+                                                <h3 class="mb-0">156</h3>
+                                            </div>
+                                            <i class="fas fa-box fa-2x opacity-75"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card bg-success text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="card-title">Total Orders</h6>
+                                                <h3 class="mb-0">1,247</h3>
+                                            </div>
+                                            <i class="fas fa-shopping-bag fa-2x opacity-75"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card bg-warning text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="card-title">Active Marketers</h6>
+                                                <h3 class="mb-0">23</h3>
+                                            </div>
+                                            <i class="fas fa-users fa-2x opacity-75"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card bg-info text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="card-title">Monthly Revenue</h6>
+                                                <h3 class="mb-0">$45,678</h3>
+                                            </div>
+                                            <i class="fas fa-dollar-sign fa-2x opacity-75"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-tabs mb-4" id="ecommerceTab">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#products">
+                                    <i class="fas fa-box me-2"></i>Products
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#orders">
+                                    <i class="fas fa-shopping-bag me-2"></i>Orders
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#marketers">
+                                    <i class="fas fa-users me-2"></i>Marketers
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#analytics">
+                                    <i class="fas fa-chart-bar me-2"></i>Analytics
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <!-- Products Tab -->
+                            <div class="tab-pane fade show active" id="products">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>Product Management</h4>
+                                    <button class="btn btn-accent">
+                                        <i class="fas fa-plus me-2"></i>Add Product
+                                    </button>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Category</th>
+                                                <th>Price</th>
+                                                <th>Stock</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="productsTable">
+                                            <!-- Products will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Orders Tab -->
+                            <div class="tab-pane fade" id="orders">
+                                <h4 class="mb-3">Order Management</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer</th>
+                                                <th>Date</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ordersTable">
+                                            <!-- Orders will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Marketers Tab -->
+                            <div class="tab-pane fade" id="marketers">
+                                <h4 class="mb-3">Marketer Management</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Marketer</th>
+                                                <th>Email</th>
+                                                <th>Sales</th>
+                                                <th>Commission</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="marketersTable">
+                                            <!-- Marketers will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Analytics Tab -->
+                            <div class="tab-pane fade" id="analytics">
+                                <h4 class="mb-3">Sales Analytics</h4>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card analysis-card">
+                                            <div class="card-header">
+                                                <h6>Monthly Sales Trend</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <canvas id="salesChart" height="200"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card analysis-card">
+                                            <div class="card-header">
+                                                <h6>Top Products</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <canvas id="productsChart" height="200"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="lmsDashboard" class="d-none">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h3><i class="fas fa-graduation-cap me-2"></i>Learning Management System</h3>
+                            <button class="btn btn-outline-secondary" onclick="showDashboardSelection()">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Selection
+                            </button>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-3 mb-3">
+                                <div class="card bg-success text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="card-title">Total Courses</h6>
+                                                <h3 class="mb-0">67</h3>
+                                            </div>
+                                            <i class="fas fa-book fa-2x opacity-75"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card bg-primary text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="card-title">Active Students</h6>
+                                                <h3 class="mb-0">2,456</h3>
+                                            </div>
+                                            <i class="fas fa-user-graduate fa-2x opacity-75"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card bg-warning text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="card-title">Instructors</h6>
+                                                <h3 class="mb-0">34</h3>
+                                            </div>
+                                            <i class="fas fa-chalkboard-teacher fa-2x opacity-75"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card bg-info text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="card-title">Course Revenue</h6>
+                                                <h3 class="mb-0">$32,890</h3>
+                                            </div>
+                                            <i class="fas fa-dollar-sign fa-2x opacity-75"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-tabs mb-4" id="lmsTab">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#courses">
+                                    <i class="fas fa-book me-2"></i>Courses
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#students">
+                                    <i class="fas fa-user-graduate me-2"></i>Students
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#instructors">
+                                    <i class="fas fa-chalkboard-teacher me-2"></i>Instructors
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#lms-analytics">
+                                    <i class="fas fa-chart-line me-2"></i>Analytics
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="courses">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4>Course Management</h4>
+                                    <button class="btn btn-accent">
+                                        <i class="fas fa-plus me-2"></i>Add Course
+                                    </button>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Course</th>
+                                                <th>Instructor</th>
+                                                <th>Students</th>
+                                                <th>Price</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="coursesTable">
+                                            <!-- Courses will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="students">
+                                <h4 class="mb-3">Student Management</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Student</th>
+                                                <th>Email</th>
+                                                <th>Enrolled Courses</th>
+                                                <th>Join Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="studentsTable">
+                                            <!-- Students will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="instructors">
+                                <h4 class="mb-3">Instructor Management</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Instructor</th>
+                                                <th>Email</th>
+                                                <th>Courses</th>
+                                                <th>Students</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="instructorsTable">
+                                            <!-- Instructors will be populated by JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="lms-analytics">
+                                <h4 class="mb-3">Learning Analytics</h4>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card analysis-card">
+                                            <div class="card-header">
+                                                <h6>Course Enrollments</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <canvas id="enrollmentsChart" height="200"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="card analysis-card">
+                                            <div class="card-header">
+                                                <h6>Completion Rates</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <canvas id="completionChart" height="200"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/admin-dasboard.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

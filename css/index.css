@@ -1928,3 +1928,434 @@ select option{
 .forget-pass:hover {
   text-decoration: underline;
 }
+
+.cart-container {
+      margin-top: 30px;
+    }
+    .cart-item {
+      border-bottom: 1px solid #e9ecef;
+      padding: 15px 0;
+    }
+    .cart-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+    .cart-summary {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .cart-summary h5 {
+      font-weight: bold;
+    }
+    .cart-summary .btn {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .cart-navbar,.user-profile-navbar{
+      background-color: #203a43;
+    }
+    .cart-main-header{
+      min-height: 60vh;
+      background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../images/cart-bg.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wishlist-main-header{
+      min-height: 60vh;
+      background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../images/wishlist.jpg);
+      background-position: bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+      .cart-main-header h3,.wishlist-main-header h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 8px rgba(0, 212, 255, 0.4);
+}
+
+/* Dashboard Styles */
+.dashboard .sidebar {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dashboard .sidebar .btn-outline-primary,.dashboard .sidebar .btn-outline-success{
+  background: linear-gradient(135deg, rgb(40, 155, 232), rgb(23, 96, 145));
+  box-shadow:
+    inset 0 0 15px rgba(255, 255, 255, 0.25),
+    inset 0 0 30px rgba(40, 155, 232, 0.4),
+    
+    0 0 15px rgba(23, 96, 145, 0.4);
+    color: white;
+    border: none;
+    padding: 13px 26px;
+}
+.dashboard-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    height: 100%;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-color);
+}
+
+.dashboard-icon {
+    width: 80px;
+    height: 80px;
+  background: linear-gradient(135deg, #396789, #245174);
+  box-shadow:
+    inset 0 0 5px rgba(255, 255, 255, 0.25),
+    inset 0 0 10px rgba(40, 155, 232, 0.4),
+    
+    0 0 5px rgba(23, 96, 145, 0.4);    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.dashboard-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.dashboard-card:hover .dashboard-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+#dashboardSelection{
+  padding-top: 70px;
+}
+#dashboardSelection ul  li{
+  border-bottom: 1px dashed #b4b4b4;
+  padding: 10px;
+}
+#ecommerceDashboard .card,#lmsDashboard .card{
+ background: linear-gradient(135deg, #521270, #6b22b9);
+  box-shadow:
+    inset 0 0 1px rgba(255, 255, 255, 0.25),
+    inset 0 0 10px rgba(107, 34, 185, 0.4),
+    
+    0 0 1px rgba(107, 34, 185, 0.4);
+  }
+
+  #ecommerceDashboard .analysis-card,#lmsDashboard .analysis-card{
+    background: white;
+  }
+
+
+/* Stat Cards */
+.stat-card {
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Profile */
+.profile-card {
+ background: linear-gradient(135deg, #521270, #6b22b9);
+  box-shadow:
+    inset 0 0 1px rgba(255, 255, 255, 0.25),
+    inset 0 0 10px rgba(107, 34, 185, 0.4),
+    
+    0 0 1px rgba(107, 34, 185, 0.4);
+        color: white;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.profile-stats .col-4 h6 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Package Cards */
+.package-card {
+    border: 2px solid transparent;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.package-card:hover {
+    transform: translateY(-3px);
+}
+
+.package-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.package-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.package-category {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Action Cards */
+.action-card {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.action-card:hover {
+    background-color: var(--light-color);
+    transform: translateY(-2px);
+}
+
+.action-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-floating {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1050;
+}
+
+/* Utilities */
+.hover-shadow {
+    transition: var(--transition);
+}
+
+.hover-shadow:hover {
+    box-shadow: var(--box-shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    .btn-floating {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Modal Enhancements */
+.modal-content {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* Form Enhancements */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: var(--transition);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+
+
+/* Badge Styles */
+.badge-category {
+    background-color: var(--info-color);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+}
+
+/* Success/Error Messages */
+.alert-custom {
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: var(--success-color);
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: var(--danger-color);
+}
+
+       /* course lessons */
+   .lessons  .sidebar {
+      background-color: #111d45;
+      min-height: 100vh;
+    }
+
+    .lesson-item {
+      cursor: pointer;
+      padding: 10px 15px;
+      color: white;
+    }
+
+    .lesson-item.active {
+      background-color: #1eaad4;
+      color: white;
+    }
+
+    .lesson-item:hover {
+      background-color: #33425a;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .controls {
+      margin-top: 20px;
+    }
+
+    .back-button {
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 15px;
+      display: inline-block;
+    }
+
+    .progress-container {
+      margin: 15px 0;
+    }
+
+    .progress {
+      height: 10px;
+      background-color: #374151;
+    }
+
+    .progress-bar {
+    background: linear-gradient(135deg, rgb(40, 155, 232), rgb(23, 96, 145));
+    }
+    .lessons .btn-primary{
+      background-color: rgb(23, 96, 145);
+      
+    }
+    
+.back-button{
+    background: linear-gradient(135deg, rgb(40, 155, 232), rgb(23, 96, 145));
+  box-shadow:
+    inset 0 0 15px rgba(255, 255, 255, 0.25),
+    inset 0 0 30px rgba(40, 155, 232, 0.4),
+    
+    0 0 15px rgba(23, 96, 145, 0.4);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 8px;
+}
+.heart-btn{
+    background: linear-gradient(135deg, rgb(211, 15, 100), rgb(0, 142, 220));
+  color: white;
+  border: none;
+}
+.heart-btn:hover{
+  color: #fff;
+}

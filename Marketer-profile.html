@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mithaqq</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <nav class="navbar user-profile-navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html"><i class="fas fa-building me-2"></i>Mithaqq</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav  d-flex gap-4 justify-content-center align-items-center ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item position-relative">
+                        <a class="nav-link active" href="index.html">
+                            Home
+                            <span class="ribbon"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#values">Goals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#companies">Companies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nile-store.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+
+
+                </ul>
+                <ul class="list-unstyled d-flex gap-3 justify-content-center align-items-center ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link px-2" href="#facebook"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link px-2" href="login.html"><i class="fa-solid fa-right-to-bracket"></i>
+                            Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2" href="#linkedin"><i class="fa-solid fa-right-from-bracket"></i>
+                            Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section class="py-5">
+        <div class="container py-5 mt-4">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card py-4 profile-card">
+                        <div class="card-body text-center">
+                            <div class="profile-avatar mx-auto mb-4">
+  <img id="marketerAvatar" src="images/company1.jpg" class="rounded-circle" width="120" height="120" style="object-fit: cover;" alt="Profile Avatar">
+</div>
+                              <h5 id="marketerName" class="card-title mb-1">John Marketer</h5>
+    <p id="marketerTitle" class="text-white small">Digital Marketing Specialist</p>
+                             <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+      <i class="fas fa-edit me-1"></i> Edit Profile
+    </button>
+                            <div class="profile-stats mt-5">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <h6 class="text-white mb-0" id="profilePackageCount">0</h6>
+                                        <small class="text-white">Packages</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">
+                                <i class="fas fa-box me-2"></i>
+                                My Packages
+                            </h5>
+                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#addPackageModal">
+                                <i class="fas fa-plus me-1"></i>Add Package
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="row" id="packagesList">
+                                <!-- Packages will appear here -->
+                            </div>
+
+                            <div id="noPackages" class="text-center py-5" style="display:none;">
+                                <i class="fas fa-box-open text-muted" style="font-size:4rem;"></i>
+                                <h5 class="text-muted mt-3">No packages yet</h5>
+                                <p class="text-muted">Start by adding your first marketing package!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="addPackageModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-plus me-2"></i>
+                        Add New Package
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addPackageForm">
+                        <div class="mb-3">
+                            <label for="packageName" class="form-label">Package Name *</label>
+                            <input type="text" class="form-control" id="packageName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="packageDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="packageDescription" rows="3"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="packagePrice" class="form-label">Price *</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" id="packagePrice" required min="0"
+                                        step="0.01">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="packageCategory" class="form-label">Category *</label>
+                                <select class="form-select" id="packageCategory" required>
+                                    <option value="">Select Category</option>
+                                    <option value="social-media">Social Media Marketing</option>
+                                    <option value="seo">SEO Optimization</option>
+                                    <option value="content">Content Marketing</option>
+                                    <option value="ppc">PPC Advertising</option>
+                                    <option value="email">Email Marketing</option>
+                                    <option value="analytics">Analytics & Reporting</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="packageDuration" class="form-label">Duration</label>
+                            <input type="text" class="form-control" id="packageDuration"
+                                placeholder="e.g., 30 days, 3 months">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="addPackage()">
+                        <i class="fas fa-plus me-1"></i>Add Package
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editProfileModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="fas fa-user-edit me-2"></i>Edit Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editProfileForm">
+          <div class="mb-3">
+            <label for="editName" class="form-label">Full Name *</label>
+            <input type="text" class="form-control" id="editName" required>
+          </div>
+          <div class="mb-3">
+            <label for="editTitle" class="form-label">Title / Job Role</label>
+            <input type="text" class="form-control" id="editTitle">
+          </div>
+          <div class="mb-3">
+            <label for="editAvatar" class="form-label">Profile Image</label>
+            <input type="file" class="form-control" id="editAvatar" accept="image/*">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="saveProfile()">
+          <i class="fas fa-save me-1"></i> Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/marketer-profile.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

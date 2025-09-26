@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mithaqq</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <nav class="navbar cart-navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-3" href="index.html"><i class="fas fa-building me-2"></i>Mithaqq</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse mt-3 mt-lg-0" id="mainNav">
+                    <ul class="navbar-nav  d-flex gap-4 justify-content-center align-items-center ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item position-relative">
+                            <a class="nav-link active" href="index.html">
+                                Home
+                                <span class="ribbon"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#values">Goals</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#companies">Companies</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nile-store.html">Store</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+
+
+                    </ul>
+                    <ul class="list-unstyled d-flex gap-3 justify-content-center align-items-center ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link px-2" href="#facebook"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link px-2" href="fav.html"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2" href="login.html"><i class="fa-solid fa-right-to-bracket"></i>
+                                Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2" href="#linkedin"><i class="fa-solid fa-right-from-bracket"></i>
+                                Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="cart-main-header">
+            <div class="container">
+                <h3>Cart Page</h3>
+            </div>
+        </header>
+    <section class="py-5">
+        <div class="container cart-container">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <h4>Your cart</h4>
+                    <p class="cart-header">5 Products in Your cart</p>
+
+                    <div class="cart-item d-flex align-items-center">
+                        <img src="images/company2.jpg" class="me-3" alt="product">
+                        <div class="flex-grow-1">
+                            <h6>Product Title</h6>
+                            <small>Price: 23 USD / per item</small>
+                        </div>
+                        <div>
+                            <div class="input-group input-group-sm me-3" style="width: 120px;">
+                                <button class="btn btn-outline-secondary btn-minus">-</button>
+                                <input type="text" class="form-control text-center qty-input" value="1">
+                                <button class="btn btn-outline-secondary btn-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="me-3 item-total">23.00 USD</div>
+                        <button class="btn btn-sm btn-outline-danger">&times;</button>
+                    </div>
+
+                    <div class="cart-item d-flex align-items-center">
+                        <img src="images/company2.jpg" class="me-3" alt="product">
+                        <div class="flex-grow-1">
+                            <h6>Product Title</h6>
+                            <small>Price: 35 USD / per item</small>
+                        </div>
+                        <div>
+                            <div class="input-group input-group-sm me-3" style="width: 120px;">
+                                <button class="btn btn-outline-secondary btn-minus">-</button>
+                                <input type="text" class="form-control text-center qty-input" value="1">
+                                <button class="btn btn-outline-secondary btn-plus">+</button>
+                            </div>
+                        </div>
+                        <div class="me-3 item-total">35.00 USD</div>
+                        <button class="btn btn-sm btn-outline-danger">&times;</button>
+                    </div>
+
+                    <button class="d-block mt-3 text-danger btn">Remove all from cart</button>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cart-summary d-flex flex-column gap-3">
+                        <div class="d-flex justify-content-between"><span>5 items:</span><span>$1703.00</span></div>
+                        <div class="d-flex justify-content-between"><span>Delivery cost:</span><span>$25</span></div>
+                        <div class="d-flex justify-content-between"><span>Tax:</span><span>$14</span></div>
+                        <div class="d-flex justify-content-between text-success"><span>Discount:</span><span>-$60</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold"><span>Total:</span><span>$1655.99</span>
+                        </div>
+
+                        <button class="btn btn-primary mt-3">Checkout →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
