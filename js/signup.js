@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const userEmail = document.getElementById("userEmail");
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirm-password");
-  const roleSelect = document.getElementById("role");
 
   const patterns = {
     name: /^[a-zA-Z\s]{3,}$/, 
@@ -65,12 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    if (input.id === "role") {
-      if (!value) {
-        showError(input, "Please select a role");
-        return false;
-      }
-    }
 
     clearError(input);
     return true;
@@ -80,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     let isValid = true;
 
-    [userName, userEmail, password, confirmPassword, roleSelect].forEach(input => {
+    [userName, userEmail, password, confirmPassword].forEach(input => {
       if (!validateField(input)) {
         isValid = false;
       }
@@ -91,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
         name: userName.value.trim(),
         email: userEmail.value.trim(),
         password: password.value.trim(),
-        role: roleSelect.value
       };
 
       let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -109,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  [userName, userEmail, password, confirmPassword, roleSelect].forEach(input => {
+  [userName, userEmail, password, confirmPassword].forEach(input => {
     input.addEventListener("input", () => validateField(input));
     input.addEventListener("change", () => validateField(input));
   });
